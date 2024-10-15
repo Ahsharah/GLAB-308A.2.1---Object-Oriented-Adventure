@@ -241,7 +241,7 @@ findByName(name) {
 
     }
 
-    // Example use:
+    // Example use: example of error handling when trying to create an invalid factory
     console.log('Creating Healer factory:');
     const healerFactory = new AdventurerFactory("Healer");
 
@@ -255,4 +255,10 @@ console.log('Created ${healerFactory.count} healers');
 console.log("\nFinding healers:");
 console.log("First healer:", healerFavtory.findByIndex(0).name);
 console.log("Healer named Galad", healerFactory.findByName("Galad").name);
-console.log
+
+
+console.log("\nTrying to create an invalid factory:");
+try {
+} catch (error) {
+    console.error("Error", error.message);
+}
