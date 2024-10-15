@@ -27,27 +27,18 @@ const adventurer = {
 const adventurer = {
     name: "Robin",
     health: 10,
-    inventory: ['sword', 'potion', 'artifact'],
+    inventory: ["sword", "potion", "artifact"],
     companion: {
-        name: "Leo",
-        type: "Cat",
-        companion : {
-        name : "Frank",
+      name: "Leo",
+      type: "Cat",
+      companion: {
+        name: "Frank",
         type: "Flea",
-        inventory: ["small hat", "sunnies"]
-     }
-        }
-    };
-
-    // Add the roll method to our adventurer.
-const adventurer = {
-name: "Robin",
-health: 10,
-inventory: ["sword", "potion", "artifact"],
-companion: {
-    name:"Leo",
-}
-
-
-
-}
+        inventory: ["small hat", "sunglasses"]
+      }
+    },
+    roll(mod = 0) {
+      const result = Math.floor(Math.random() * 20) + 1 + mod;
+      console.log(`${this.name} rolled a ${result}.`);
+    }
+  };
