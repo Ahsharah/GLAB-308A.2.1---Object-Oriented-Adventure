@@ -231,4 +231,28 @@ findByIndex(index) {
 return this.adventurers[index];
 }
 
-// Method to find an adventurer by thair name
+// Method to find an adventurer by their name
+findByName(name) {
+    return this.adventurers.find((a) => a.name === name);
+}
+    // Method to get the count of adventurers
+    get count () {
+        return this.adventures.length;
+
+    }
+
+    // Example use:
+    console.log('Creating Healer factory:');
+    const healerFactory = new AdventurerFactory("Healer");
+
+    console.log("Generating healers:");
+    const robin = healerFavroty.generate("Robin");
+    const galad = healerFactory.generate("Galad");
+    const alice = healerFactory.generate("Alice");
+
+console.log('Created ${healerFactory.count} healers');
+
+console.log("\nFinding healers:");
+console.log("First healer:", healerFavtory.findByIndex(0).name);
+console.log("Healer named Galad", healerFactory.findByName("Galad").name);
+console.log
