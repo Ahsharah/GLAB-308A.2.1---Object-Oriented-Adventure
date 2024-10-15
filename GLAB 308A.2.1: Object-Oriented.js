@@ -107,11 +107,37 @@ class Adventurer extends Character {
         super(name);
         this.role = role;
         this.inventory.push("bedroll", "50 gold coins");
+
+    }
+
+    scout() {
+        console.log('${this.name} is scouting ahead...');
+        super.roll();
+    }
+
+    // Additinoal method for Adventurers
+    rest() {
+        console.log('${this.name} sets up the camp and rests.');
+        this.health = Math.min(100, this.health + 10);
+    }
+}
+
+// Companion class extending Character
+class Companion extends Character {
+    constuctor(name, type) {
+        super(name);
+        this.type = type;
+    }
+
+    // Unique method for companion(s)
+    assist(adventurer) {
+        console.log('${this.name} assist ${adventurer.name}.');
+        adventurer.roll(2); // Assist gives a +2 bonus to the roll
         
     }
 }
 
-
+//Create
 
 
 
