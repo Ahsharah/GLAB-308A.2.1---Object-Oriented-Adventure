@@ -223,4 +223,12 @@ this.adventurer.push(newAdventurer);
 return newAdventurer;
 }
 
-// Method to 
+// Method to find an adventurer by their index in the array
+findByIndex(index) {
+    if (index < 0 || index >= this.adventureres.length) {
+        throw new Error("Invalid index");
+    }
+return this.adventurers[index];
+}
+
+// Method to find an adventurer by thair name
