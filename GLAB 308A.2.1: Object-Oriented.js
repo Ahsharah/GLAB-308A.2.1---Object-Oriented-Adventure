@@ -203,4 +203,24 @@ class Character {
     console.log("Max Health:", Character.MAX_HEALTH);
     console.log("Available Roles:", Adventurer.ROLES);
 
+// Part 5:
+// AdventureFactory class for generating multiple adventures of the same role.
+class AdventurerFactory {
+    constructor(role) {
+        // Ensure the role is valid
+        if(!Adventurer.ROLES.includes(role)) {
+            throw new Error("Invalid role for AdventurerFactory");
+        }
+this.role = role;
+this.adventurers = []; // Array to store created adventures
+    }
 }
+
+// Method to generate a new adventurer
+generate (name) {
+const newAdventurer = new Adventurer(name, this.role);
+this.adventurer.push(newAdventurer);
+return newAdventurer;
+}
+
+// Method to 
