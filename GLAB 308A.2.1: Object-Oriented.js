@@ -63,6 +63,7 @@ robin.companion.companion = "Flea";
 robin.companion.companion.inventory = ["small hat", "sunnies"];
 */
 
+//Part 1 & 2 - Humble Beginnings + Class Fantasy
 // Create the Character class
 class Character {
     constructor(name) {
@@ -98,3 +99,20 @@ robin.companion.roll();
 robin.companion.companion.roll();
 
 console.log(robin);
+
+// Part 3 - Class Features - Extend with Adventurer class.
+// Adventurer class extending Character
+class Adventurer extends Character {
+    constructor(name, role) {
+        super(name);
+        this.role = role;
+        this.inventory.push("bedroll", "50 gold coins");
+        
+    }
+}
+
+
+
+
+
+}
