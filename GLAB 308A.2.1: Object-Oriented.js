@@ -137,7 +137,10 @@ class Companion extends Character {
     }
 }
 
-//Create
+// Create instances using the new classes
+const robin = new Adventurer("Robin", "Rouge");
+const leo = new Companion("Leo", "Cat");
+const frank = new Companion("Frank", "Flea");
 
 
 
