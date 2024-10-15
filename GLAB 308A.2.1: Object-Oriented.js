@@ -151,3 +151,56 @@ console.log(robin);
 robin.scout();
 robin.rest();
 leo.assist(robin);
+
+// Part 4 - Class Uniforms
+class Character {
+    static MAX_HEALTH = 100;
+
+    constuctor(name) {
+        this.name = name;
+        this.health = Character.MAX_HEALTH;
+        this.inventory = [];
+    }
+
+    roll(mod = 0) {
+        const result = Math.floor(Math.random() * 20) + 1 + mod;
+        console.log(`${this.name} rolled a ${result}.`);
+        return result;
+      }
+    }
+    
+    class Adventurer extends Character {
+      static ROLES = ["Fighter", "Healer", "Wizard"];
+    
+      constructor(name, role) {
+        super(name);
+        if (Adventurer.ROLES.includes(role)) {
+          this.role = role;
+        } else {
+          throw new Error("Invalid role");
+        }
+        this.inventory.push("bedroll", "50 gold coins");
+      }
+    
+      scout() {
+        console.log(`${this.name} is scouting ahead...`);
+        super.roll();
+      }
+    }
+    
+    // Example: 
+    try {
+      const robin = new Adventurer("Robin", "Fighter");
+      console.log(robin);
+      robin.scout();
+    
+      // This will throw an error
+      // const invalidAdventurer = new Adventurer("Invalid", "InvalidRole");
+    } catch (error) {
+      console.error(error.message);
+    }
+    
+    console.log("Max Health:", Character.MAX_HEALTH);
+    console.log("Available Roles:", Adventurer.ROLES);
+
+}
