@@ -29,6 +29,25 @@ const adventurer = {
     health: 10,
     inventory: ['sword', 'potion', 'artifact'],
     companion: {
-        name: "Leo"
-    }
+        name: "Leo",
+        type: "Cat",
+        companion : {
+        name : "Frank",
+        type: "Flea",
+        inventory: ["small hat", "sunnies"]
+     }
+        }
+    };
+
+    // Add the roll method to our adventurer.
+const adventurer = {
+name: "Robin",
+health: 10,
+inventory: ["sword", "potion", "artifact"],
+companion: {
+    name:"Leo",
+}
+
+
+
 }
