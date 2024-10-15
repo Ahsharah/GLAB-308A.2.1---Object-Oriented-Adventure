@@ -142,6 +142,12 @@ const robin = new Adventurer("Robin", "Rouge");
 const leo = new Companion("Leo", "Cat");
 const frank = new Companion("Frank", "Flea");
 
+// Set up the companion relstionships
+robin.companion = leo;
+leo.companion = frank;
 
-
-}
+// Demo the new structure
+console.log(robin);
+robin.scout();
+robin.rest();
+leo.assist(robin);
